@@ -1,0 +1,19 @@
+#alert icmp any any -> any any (msg:"ICMP Destination Unreachable(Port #Unreachable)(mariammohamed)";itype:3;icode:3;sid:100001;)
+
+#alert icmp any any -> any any (msg:"ICMP Destination Unreachable(Host #Unreachable)(mariammohamed)";itype:3;icode:1;sid:100002;)
+
+
+#alert icmp any any -> any any (msg:"ICMP Destination Unreachable(Network #Unreachable)(mariammohamed)";itype:3;icode:1;sid:100002;)
+
+#alert icmp any any -> any any (msg:"ICMP Destination Unreachable(Protocol #Unreachable)(mariammohamed)";itype:3;icode:2;sid:100004;)
+
+
+#alert tcp 192.168.1.1 any -> 192.168.1.2 5032(msg:"TCP Traffic (mariammohamed)";sid:100005;)
+
+#alert tcp any any -> any any(content:"I am evil";within:20;msg:"Evil Packet #Found(mariammohamed)";sid:100006;)
+
+
+
+
+
+
